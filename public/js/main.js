@@ -1,30 +1,6 @@
 (function ($) {
   "use strict";
 
-  // Officer adder
-  function officer(img, name, position, year, major, funfact, delay) {
-    $('#officer-list').append('<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="'+delay+'"> <div class="member"> <img src="' + img + '" class="img-fluid" alt=""> <div class="member-info"> <div class="member-info-content"> <h4>' + name + '</h4> <span>' + position + '</span> <ul style="text-align:left; font-size: 12px; color: white;"> <li>' + year + '</li> <li>' + major + '</li> <li>' + funfact + '</li> </ul> </div> </div> </div> </div>');
-  }
-
-  officer('https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/57579904_2173364496120137_4126845169179820032_n.jpg?_nc_cat=103&_nc_oc=AQlnU-OSf0paZOe6dqMOTeppBMmrE6yqspkU7pbRg1Ynd34UTovM2LGObhwxetuQrg0&_nc_ht=scontent-iad3-1.xx&oh=47234a7ad38370a395ddb40499352514&oe=5DE68F2E', 'Chelsea Wells', 'President', '3rd year', 'Cognitive Science & Foreign Affairs', 'Self-proclaimed ramen expert.', '0s');
-  officer('img/profiles/jimmy.png', 'Jimmy Chiou', 'Vice President', '2nd year', 'Computer Science & Physics', 'I main Zelda in Smash.', '0.2s');
-  officer('https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/36753831_2019094004792134_939369902379106304_n.jpg?_nc_cat=103&_nc_oc=AQmOyeURPI93Nzhq7_d1JhtDNwB114MciFEMA32Kmmdkcm4ngFZa724YLpkScOUjjFU&_nc_ht=scontent-iad3-1.xx&oh=a8f7e17f310948cbb35e423f1bbcdd2d&oe=5DD4611D', 'Marguerite Franklin', 'Treasurer', '4th year', 'Biology & Japanese', 'I’ve been doing Karate since I was in Kindergarten.', '0.4s');
-  officer('img/profiles/victor.png', 'Victor Yang', 'Secretary', '3rd year', 'Aerospace Engineering and Japanese', 'I studied abroad at Kyoto last summer.', '0.6s');
-
-  officer('img/profiles/lada.png', 'Lada Semicheva', 'Culture Chair', '3rd year', 'Computer Science & Art', 'I did all of the escape rooms in my area.', '0s');
-  officer('https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/66425319_696735410765542_3836183583840534528_n.jpg?_nc_cat=101&_nc_oc=AQnplI4OsSdgtg-xl91_Esk92vNeT9FJ2lFZ-HzxyRkQfIstWzIywg4iYXzXZjhPfS0&_nc_ht=scontent-iad3-1.xx&oh=57e80f2528869353f9080a8c73598fe0&oe=5DE61140', 'Lona Lu', 'Culture Chair', '3rd year', 'Computer Science', 'My memory is usually in third person perspective.', '0.2s');
-  officer('img/profiles/alex.jpg', 'Alex Lafountain', 'Academic Chair', '4th year', 'Japanese', 'I once hit platinum in League of Legends.', '0.4s');
-  officer('https://scontent.fric1-1.fna.fbcdn.net/v/t1.0-9/49668486_1999612076798523_5111147825408770048_n.jpg?_nc_cat=110&_nc_oc=AQl5tXie-9uU6QSSZpwwuwxlLkU50uQ4vcIxSrW2fk0vnPO70B7bvYA-Mz6H_onmOoseTDt4aBMCxzW8J__6_l39&_nc_ht=scontent.fric1-1.fna&oh=a816fb810efa1a1552637d585461b890&oe=5E1A8A7F', 'Brian Hong', 'Publicity', '4th year', 'Computer Science', 'Somewhat of an indie app/game developer.', '0.6s');
-
-  officer('https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/21616556_1572205609508994_4913336042716249863_n.jpg?_nc_cat=103&_nc_oc=AQkRyp8xqWzqYLBri_-BBvPwHKzy3-rXHYHwP0QYI-Cao4pQ464fzLLEYHRMDOSWYec&_nc_ht=scontent-iad3-1.xx&oh=9a7d192c610785691b2ac251c3af80bf&oe=5DEEDDD1', 'Carl Zhang', 'Fundraising/Family', '4th year', 'Computer Science', 'My League of Legends team for UVA LCS won first place in the recent Spring 2019 split.', '0s');
-  officer('img/profiles/hua.png', 'Hua Uehara', 'Family Head', '4th year', 'Computer Engineering', 'I built my first robot when I was in highschool.', '0.2s');
-  officer('https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/47684571_2373183302754934_2098768320747536384_n.jpg?_nc_cat=110&_nc_oc=AQlXmmPH-_Wg1q5AQK6myWSV7kbaI7xZwL4l1uriUTcs3DNsJL7J96k5rP_WvI6i3GE&_nc_ht=scontent-iad3-1.xx&oh=42685514a94a6c9e930847c5340c1619&oe=5DDF7F19', 'Thu Tran', 'Family Head', '4th year', 'Electrical Engineering', 'I’ve been mario karting in Tokyo.', '0.4s');
-  officer('https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-1/31784412_2117996881756274_6804550514215223296_n.jpg?_nc_cat=102&_nc_oc=AQmdw3JZDvyMT8Si0LMf5oMIxjTWExie8I6BGWZpBTbGKNRA5Irx3mRj0-xUiXrfKPU&_nc_ht=scontent-iad3-1.xx&oh=46f0266d39e58d0956e89ae6040cd9d5&oe=5DE5F57F', 'Alyssa Luehring', 'Family Head', '2nd year', 'East Asian Studies', 'I’m an Irish dancer and am oddly proficient in finding 4 leaf clovers.', '0.6s');
-
-  officer('img/profiles/mcd.png', 'Mary Catherine Dudley', 'Family Head', '2nd year', 'Japanese & Foreign Affairs', 'I can make a latte in less than 50 seconds.', '0s');
-  officer('img/profiles/adrian.png', 'Adrian Thinnyun', 'Family Head', '3rd year', 'Computer Science and Cognitive Science', 'I can play 12 different instruments.', '0.2s');
-
-
   // Preloader
   $(window).on('load', function () {
     if ($('#preloader').length) {
